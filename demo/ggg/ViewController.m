@@ -8,6 +8,9 @@
 
 #import "ViewController.h"
 #import "KViewController.h"
+#import "UIScrollerViewController.h"
+#import "YZGVVVController.h"
+#import "YZGKKKController.h"
 @interface ViewController ()
 {
     NSMutableArray *buttonArray;    /**< 按钮数组 */
@@ -28,7 +31,7 @@
         buttonArray = [NSMutableArray new];//使用数组约束
         _bottomView = [[UIView alloc]init];
         _bottomView.backgroundColor = [UIColor whiteColor];
-        NSArray *array = [NSArray arrayWithObjects:@"显示说说",@"发布说说",@"上传图片",nil];
+        NSArray *array = [NSArray arrayWithObjects:@"多个按钮",@"UIScrollerView 子视图问题",@"ScrollerView 拖IB",nil];
         for(int i=0;i<array.count;i++){
             
             UIButton *button=[UIButton buttonWithType:UIButtonTypeSystem];
@@ -49,35 +52,35 @@
     return _bottomView;
 }
 #pragma mark ************************* 监听button方法
-//-(void)buttonAction:(UIButton *)sender{
-//    switch (sender.tag) {
-//        case 100:
-//        {
-//            YZGShowTalkVC *vc = [[YZGShowTalkVC alloc]init];
-//            [self.navigationController pushViewController:vc animated:YES];
-//        }
-//            break;
-//
-//        case 101:
-//        {
-//            YZGReleaseTalkVC *vc = [[YZGReleaseTalkVC alloc]init];
-//            [self.navigationController pushViewController:vc animated:YES];
-//        }
-//            break;
-//        case 102:
-//        {
-//            YZGUploadImageVC *vc = [[YZGUploadImageVC alloc]init];
-//            [self.navigationController pushViewController:vc animated:YES];
-//        }
-//            break;
-//            
-//        default:
-//            break;
-//    }
-//    
-//    
-//    
-//}
+-(void)buttonAction:(UIButton *)sender{
+    switch (sender.tag) {
+        case 100:
+        {
+            UIScrollerViewController *vc = [[UIScrollerViewController alloc]init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+            
+        case 101:
+        {
+            
+            [self.navigationController pushViewController:[YZGVVVController new] animated:YES];
+        }
+            break;
+        case 102:
+        {
+            [self.navigationController pushViewController:[YZGKKKController new] animated:YES];
+            
+        }
+            break;
+            
+        default:
+            break;
+    }
+    
+    
+    
+}
 
 
 
@@ -86,8 +89,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
     self.view.backgroundColor = [UIColor whiteColor];
-
+    
     [self.view addSubview:self.bottomView];
     
     [_bottomView makeConstraints:^(MASConstraintMaker *make) {
@@ -105,7 +109,7 @@
         make.left.equalTo(self.bottomView);
     }];
     
-
+    
 }
 
 @end

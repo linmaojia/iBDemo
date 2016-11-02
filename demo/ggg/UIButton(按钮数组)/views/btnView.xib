@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="btnView">
+            <rect key="frame" x="0.0" y="0.0" width="457" height="169"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9i-fm-HQL">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="7bp-DC-oUK"/>
+                        <constraint firstAttribute="height" constant="40" id="ua7-EY-STC"/>
+                    </constraints>
+                    <state key="normal" title="我的服务"/>
+                    <connections>
+                        <action selector="btnAcion:" destination="iN0-l3-epB" eventType="touchUpInside" id="LQ3-dF-gWA"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G4n-8o-6XU">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="GRd-LN-bJb"/>
+                        <constraint firstAttribute="height" constant="40" id="g5Z-Uj-oCR"/>
+                    </constraints>
+                    <state key="normal" title="我的首尔"/>
+                    <connections>
+                        <action selector="btnAcion:" destination="iN0-l3-epB" eventType="touchUpInside" id="nOY-nV-Kj5"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5rK-uA-Jc7">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="DDk-FM-IbD"/>
+                        <constraint firstAttribute="width" constant="80" id="vLq-7Q-Spw"/>
+                    </constraints>
+                    <state key="normal" title="我的订单"/>
+                    <connections>
+                        <action selector="btnAcion:" destination="iN0-l3-epB" eventType="touchUpInside" id="5XN-ge-4L1"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.76443768996960482" green="0.85356905395136706" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="R9i-fm-HQL" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="D2L-1D-o7L"/>
+                <constraint firstItem="5rK-uA-Jc7" firstAttribute="leading" secondItem="R9i-fm-HQL" secondAttribute="trailing" constant="20" id="DWW-vu-hTJ"/>
+                <constraint firstItem="5rK-uA-Jc7" firstAttribute="centerY" secondItem="R9i-fm-HQL" secondAttribute="centerY" id="HiS-aQ-X3v"/>
+                <constraint firstItem="R9i-fm-HQL" firstAttribute="leading" secondItem="G4n-8o-6XU" secondAttribute="trailing" constant="20" id="PcI-mz-48g"/>
+                <constraint firstItem="G4n-8o-6XU" firstAttribute="centerY" secondItem="R9i-fm-HQL" secondAttribute="centerY" id="YaM-P4-K1T"/>
+                <constraint firstItem="R9i-fm-HQL" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="aZJ-ua-SD3"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="btn_1" destination="R9i-fm-HQL" id="kWO-ot-x4s"/>
+                <outlet property="btn_2" destination="G4n-8o-6XU" id="Lzr-ap-48w"/>
+                <outlet property="btn_3" destination="5rK-uA-Jc7" id="0Q0-gW-lp5"/>
+            </connections>
+            <point key="canvasLocation" x="-1306" y="-201"/>
+        </view>
+    </objects>
+</document>
