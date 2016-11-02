@@ -24,6 +24,9 @@
     
     [self setNavigationBarTheme];//导航栏背景不是图片
     
+//    [self setNavigationBarThemeImg];//导航栏背景是图片
+
+    
 }
 - (void)setNavigationBarTheme
 {
@@ -39,16 +42,53 @@
     [appearance setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor] ,NSFontAttributeName:[UIFont boldSystemFontOfSize:17]}];
     //返回item颜色
     [appearance setTintColor:[UIColor whiteColor]];
+    
+  
+    
 }
 
 
+
+- (void)setNavigationBarThemeImg
+{
+    /*
+   
+     子视图添加时候 要从 （0，0） 开始布局
+     
+     */
+    UINavigationBar *appearance = [UINavigationBar appearance];
+    //导航栏背景颜色
+    [appearance setBackgroundImage:[UIImage imageNamed:@"navBar"] forBarMetrics:UIBarMetricsDefault];
+    //设置中部文字属性,颜色和字体大小
+    [appearance setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor] ,NSFontAttributeName:[UIFont boldSystemFontOfSize:17]}];
+    //返回item颜色
+    [appearance setTintColor:[UIColor whiteColor]];
+    
+    
+   //如果用图片，会和下面代码执行布局的效果一样，都是从导航栏开始计算，如果想去除， 则改为 UIRectEdgeAll
+    
+    //设置CGRectZero从导航栏下开始计算
+//    if ([self respondsToSelector:@selector(setEdgesForExtendedLayout:)])
+//    {
+//        self.edgesForExtendedLayout = UIRectEdgeNone;//默认为all
+//    }
+    
+    
+    
+    
+    
+    
+ 
+
+
+}
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
     
     if (self.viewControllers.count > 0) {
         viewController.hidesBottomBarWhenPushed = YES;
-    }
-    
-    [super pushViewController:viewController animated:animated];
+        }
+
+       [super pushViewController:viewController animated:animated];
 }
 
 /**

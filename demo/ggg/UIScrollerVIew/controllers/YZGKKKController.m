@@ -64,6 +64,8 @@
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0 ? YES:NO) {
         self.automaticallyAdjustsScrollViewInsets = NO;
     }
+    
+  
 }
 - (void)backAction
 {
@@ -86,8 +88,18 @@
 #pragma mark ************** 添加约束
 - (void)addConstraintsForView
 {
+
+
+ 
+      //设置CGRectZero从导航栏下开始计算
+//     if ([self respondsToSelector:@selector(setEdgesForExtendedLayout:)]) {
+//         self.edgesForExtendedLayout = UIRectEdgeNone;//默认为all
+//     }
+//    _scroll.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 64);
+
     
-    _scroll.frame = CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT - 64);
+   
+//    _scroll.frame = CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT - 64);
 
     _successView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 800);
 

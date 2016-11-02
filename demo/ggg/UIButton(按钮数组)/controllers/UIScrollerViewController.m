@@ -80,6 +80,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+    
     [self setNav];//设置导航栏
     
     [self addSubviewsForView];
@@ -93,7 +95,7 @@
 {
     self.title = @"UIScrollView";
     self.view.backgroundColor = [UIColor whiteColor];
-    
+
 }
 - (void)backAction
 {
